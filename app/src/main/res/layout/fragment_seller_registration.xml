@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_seller_registration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.registration.seller.SellerRegistrationFragment">
+
+    <include
+        android:id="@+id/incl_progress"
+        layout="@layout/layout_progress"
+        android:elevation="20dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv_fields"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_fields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_6x">
+
+            <include
+                android:id="@+id/incl_toolbar"
+                layout="@layout/layout_toolbar_center_align" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/TextStyle.Header1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginTop="@dimen/dp_1.5x"
+                android:text="@string/registration_as_seller"
+                app:layout_constraintTop_toBottomOf="@id/incl_toolbar" />
+
+            <FrameLayout
+                android:id="@+id/fragment_container_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginTop="@dimen/dp_4.75x"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <kg.sunrise.infoapteka.ui.views.LoadFileView
+                android:id="@+id/loadFileImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginTop="@dimen/dp_3x"
+                app:layout_constraintBottom_toTopOf="@+id/rv_items_certificate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_container_view" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_items_certificate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loadFileImageView"
+                app:spanCount="3" />
+
+            <include
+                android:id="@+id/incl_tv_certificate_warning"
+                layout="@layout/layout_profile_certificates_uploading_warning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_2x"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_items_certificate" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_loyalty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_2.5x"
+                android:buttonTint="@color/blue"
+                app:layout_constraintBottom_toBottomOf="@id/tv_loyalty"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_loyalty" />
+
+            <TextView
+                android:id="@+id/tv_loyalty"
+                style="@style/TextStyle.Content.Gray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_1.5x"
+                android:layout_marginTop="@dimen/dp_2.5x"
+                android:layout_marginEnd="@dimen/dp_2.5x"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cb_loyalty"
+                app:layout_constraintTop_toBottomOf="@id/incl_tv_certificate_warning"
+                tools:text="С правилами программы\nознакомился(ась)" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sign_up"
+                style="@style/ButtonStyle.SecondaryGray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginTop="@dimen/dp_3.5x"
+                android:layout_marginBottom="@dimen/dp_6x"
+                android:text="@string/sign_up"
+                app:cornerRadius="@dimen/dp_1.5x"
+                app:layout_constraintTop_toBottomOf="@id/tv_loyalty" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

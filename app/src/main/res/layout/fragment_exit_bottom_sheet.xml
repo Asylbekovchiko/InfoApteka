@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="@dimen/dp_2x"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/Are_you_sure_to_exit"
+        android:textAlignment="center"
+        android:textColor="@color/gray_0f335d"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_exit"
+        style="@style/ButtonStyle.Green"
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/secondary_red"
+        android:layout_height="@dimen/dp_5.75x"
+        android:layout_marginTop="24dp"
+        android:text="@string/Exit"
+        app:cornerRadius="@dimen/dp_1.5x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_dismiss"
+        android:layout_marginTop="@dimen/dp_1x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_exit"
+        android:layout_width="match_parent"
+        style="@style/ButtonStyle.StrokeLight"
+        android:text="@string/Cancel"
+        app:cornerRadius="@dimen/dp_1.5x"
+        android:layout_height="@dimen/dp_5.75x"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

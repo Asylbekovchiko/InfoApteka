@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="kg.sunrise.infoapteka.ui.auth.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_confirmFragment"
+            app:destination="@id/confirmFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+            app:destination="@id/confirmFragment" />
+
+        <argument
+            android:name="is_sign_in"
+            android:defaultValue="true"
+            app:argType="boolean" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmFragment"
+        android:name="kg.sunrise.infoapteka.ui.auth.confirm.ConfirmFragment"
+        android:label="fragment_confirm"
+        tools:layout="@layout/fragment_confirm">
+
+        <argument
+            android:name="phone_number"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_confirmFragment_to_userTypeFragment"
+            app:destination="@id/userTypeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userTypeFragment"
+        android:name="kg.sunrise.infoapteka.ui.auth.usertype.UserTypeFragment"
+        android:label="fragment_user_type"
+        tools:layout="@layout/fragment_user_type">
+
+        <action
+            android:id="@+id/action_userTypeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_userTypeFragment_to_clientRegistrationFragment"
+            app:destination="@id/clientRegistrationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <argument
+            android:name="phone_number"
+            android:defaultValue="+996552300163"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_userTypeFragment_to_sellerRegistrationFragment"
+            app:destination="@id/sellerRegistrationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/clientRegistrationFragment"
+        android:name="kg.sunrise.infoapteka.ui.auth.registration.client.ClientRegistrationFragment"
+        android:label="fragment_client_registration"
+        tools:layout="@layout/fragment_client_registration">
+
+        <argument
+            android:name="phone_number"
+            android:defaultValue="+996 552 300 163"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_clientRegistrationFragment_to_registrationSuccessfulFragment"
+            app:destination="@id/registrationSuccessfulFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/sellerRegistrationFragment"
+        android:name="kg.sunrise.infoapteka.ui.auth.registration.seller.SellerRegistrationFragment"
+        android:label="fragment_seller_registration"
+        tools:layout="@layout/fragment_seller_registration">
+
+        <argument
+            android:name="phone_number"
+            android:defaultValue="+996 552 300 163"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_sellerRegistrationFragment_to_zoomFragment"
+            app:destination="@id/zoomFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_sellerRegistrationFragment_to_registrationSuccessfulFragment"
+            app:destination="@id/registrationSuccessfulFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/zoomFragment"
+        android:name="kg.sunrise.infoapteka.ui.shared.zoomFragment.ZoomFragment"
+        android:label="fragment_zoom"
+        tools:layout="@layout/fragment_zoom">
+
+        <argument
+            android:name="imageURL"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationSuccessfulFragment"
+        android:name="kg.sunrise.infoapteka.ui.auth.success.RegistrationSuccessfulFragment"
+        android:label="fragment_registration_successful"
+        tools:layout="@layout/fragment_registration_successful" />
+
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="kg.sunrise.infoapteka.ui.auth.privacyPolicy.PrivacyPolicyFragment"
+        android:label="fragment_privace_policy"
+        tools:layout="@layout/fragment_privace_policy" />
+
+    <action
+        android:id="@+id/action_global_privacyPolicyFragment"
+        app:destination="@id/privacyPolicyFragment" />
+
+</navigation>

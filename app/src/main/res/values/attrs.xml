@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextInputView">
+        <attr name="android:inputType"/>
+        <attr name="android:paddingStart" format="reference"/>
+        <attr name="label" format="string" />
+        <attr name="isRequired" format="boolean" />
+        <attr name="hint" format="string" />
+        <attr name="errorText" format="string" />
+        <attr name="editTextLeftIcon" format="reference" />
+        <attr name="editTextRightIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadFileView">
+        <attr name="android:inputType"/>
+    </declare-styleable>
+</resources>

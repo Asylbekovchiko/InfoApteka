@@ -1,0 +1,49 @@
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dp_0.5x"
+    android:background="@drawable/shape_ffffff_rad_16dp"
+    android:paddingHorizontal="@dimen/dp_1.5x"
+    app:layoutDescription="@xml/rv_item_help_queations_scene">
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dp_0.5x"
+            android:src="@drawable/ic_arrow_half_up"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextStyle.Content2.Black"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:paddingVertical="@dimen/dp_2x"
+            android:paddingEnd="@dimen/dp_2.5x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry"
+            tools:text="wqerqfggdfgdfwerasdasssdsd" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/TextStyle.Content"
+            android:layout_width="match_parent"
+            android:layout_height="0.01dp"
+            android:alpha="0"
+            android:paddingBottom="@dimen/dp_1.5x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            tools:text="@string/Bestseller_products"
+             />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

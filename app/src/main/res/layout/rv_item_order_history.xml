@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motion_toggle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dp_1x"
+    android:background="@drawable/shape_ffffff_rad_16dp"
+    android:paddingHorizontal="@dimen/dp_2.5x"
+    app:layoutDescription="@xml/rv_item_order_history_scene">
+
+    <TextView
+        android:id="@+id/tv_order_number"
+        style="@style/TextStyle.Content.SecondaryGray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_2x"
+        android:paddingTop="16dp"
+        android:text="@string/Order_number"
+        app:layout_constraintEnd_toStartOf="@id/btn_reorder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_reorder"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/dp_2x"
+        android:backgroundTint="@color/white"
+        android:stateListAnimator="@null"
+        android:visibility="gone"
+        app:elevation="0dp"
+        app:icon="@drawable/ic_update"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_order_date"
+        style="@style/TextStyle.Content.Orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_0.5x"
+        android:fontFamily="@font/inter_bold"
+        tools:text="@tools:sample/date/ddmmyy"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_order_number" />
+
+    <TextView
+        android:layout_marginStart="@dimen/dp_1x"
+        android:id="@+id/tv_order_time"
+        style="@style/TextStyle.Content.Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/tv_order_date"
+        app:layout_constraintTop_toTopOf="@id/tv_order_date"
+        tools:text="11:22" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_mock_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1.5x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_order_date">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="2"
+            tools:listitem="@layout/rv_item_order_product" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_total"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape_rad_16dp_border_1dp_light"
+        android:paddingHorizontal="@dimen/dp_2x"
+        android:paddingVertical="@dimen/dp_3x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_mock_rv"
+        app:layout_constraintVertical_bias="0">
+
+        <TextView
+            android:id="@+id/tv_total"
+            style="@style/TextStyle.Header2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Total"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_status_title"
+            style="@style/TextStyle.Content.SecondaryGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_2.5x"
+            android:text="@string/Order_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_total" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/TextStyle.Content.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_status_title" />
+
+        <TextView
+            android:id="@+id/tv_product_count_title"
+            style="@style/TextStyle.Content.SecondaryGray"
+            android:layout_width="wrap_content"
+            android:includeFontPadding="true"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1x"
+            android:text="@string/Product_amount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_status_title" />
+
+        <TextView
+            android:id="@+id/tv_product_count"
+            style="@style/TextStyle.Content.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_product_count_title" />
+
+        <TextView
+            android:id="@+id/tv_total_amount_title"
+            style="@style/TextStyle.Content.SecondaryGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1x"
+            android:text="@string/Total_amount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_product_count_title" />
+
+        <TextView
+            android:id="@+id/tv_total_amount"
+            style="@style/TextStyle.Content.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_total_amount_title" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_expand"
+            style="@style/ButtonStyle.Green"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="@dimen/dp_2.5x"
+            android:text="@string/Expande_detail"
+            android:visibility="visible"
+            app:icon="@drawable/ic_arrow_down"
+            app:iconGravity="textEnd"
+            app:iconPadding="@dimen/dp_1.5x"
+            android:shadowColor="@color/black"
+            app:iconSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_amount" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_collapse"
+            style="@style/ButtonStyle.StrokeLight"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="@dimen/dp_2.5x"
+            android:text="@string/Collapse_detail"
+            android:visibility="gone"
+            app:icon="@drawable/ic_arrow_up"
+            app:iconTint="@color/blue"
+            app:iconGravity="textEnd"
+            app:iconPadding="@dimen/dp_1.5x"
+            app:iconSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_amount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

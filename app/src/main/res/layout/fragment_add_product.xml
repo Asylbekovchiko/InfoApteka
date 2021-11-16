@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constrainedHeight="true"
+    tools:context=".ui.main.product.AddProductFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sv_fields"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/incl_toolbar"
+                layout="@layout/layout_toolbar_center_align" />
+
+            <kg.sunrise.infoapteka.ui.views.TextInputView
+                android:id="@+id/et_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginTop="@dimen/dp_2x"
+                app:editTextRightIcon="@drawable/ic_arrow_half_down"
+                app:hint="@string/category"
+                app:label="@string/choose_category"
+                app:layout_constraintTop_toBottomOf="@id/incl_toolbar" />
+
+            <kg.sunrise.infoapteka.ui.views.TextInputView
+                android:id="@+id/et_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginTop="@dimen/dp_3x"
+                app:hint="@string/type_product_name"
+                app:label="@string/product_name"
+                app:layout_constraintTop_toBottomOf="@id/et_category" />
+
+            <TextView
+                android:id="@+id/tv_label_product_description"
+                style="@style/TextStyle.Content.SecondaryGray3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginTop="@dimen/dp_3x"
+                android:fontFamily="@font/inter_semi_bold"
+                android:text="@string/product_description"
+                android:textColor="@color/secondary_gray_3"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@id/et_product_name" />
+
+            <EditText
+                android:id="@+id/et_product_description"
+                style="@style/TextStyle.Content.Black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginTop="@dimen/dp_0.5x"
+                android:background="@drawable/stroke_width_1dp_radius_8dp"
+                android:gravity="top"
+                android:hint="@string/type_text"
+                android:minHeight="164dp"
+                android:paddingHorizontal="@dimen/dp_1.5x"
+                android:paddingVertical="@dimen/dp_0.5x"
+                android:saveEnabled="false"
+                android:textColorHint="@color/secondary_gray"
+                app:layout_constraintTop_toBottomOf="@id/tv_label_product_description"
+                tools:ignore="Autofill,TextFields" />
+
+            <kg.sunrise.infoapteka.ui.views.TextInputView
+                android:id="@+id/et_product_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginTop="@dimen/dp_3x"
+                android:inputType="number"
+                app:hint="@string/type_price"
+                app:label="@string/product_price"
+                app:layout_constraintTop_toBottomOf="@id/et_product_description" />
+
+            <kg.sunrise.infoapteka.ui.views.LoadFileView
+                android:id="@+id/loadFileImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginTop="@dimen/dp_3x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_product_price" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loadFileImageView"
+                app:spanCount="3" />
+
+            <include
+                android:id="@+id/incl_tv_certificate_warning"
+                layout="@layout/layout_profile_certificates_uploading_warning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_2x"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_photo" />
+
+            <TextView
+                android:id="@+id/tv_label_photo_limit"
+                style="@style/TextStyle.Content.SecondaryGray2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/photo_limit"
+                app:layout_constraintTop_toBottomOf="@id/incl_tv_certificate_warning" />
+
+
+            <LinearLayout
+                android:id="@+id/cl_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginTop="@dimen/dp_4x"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_5x"
+                app:layout_constraintTop_toBottomOf="@id/tv_label_photo_limit">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_ok"
+                    style="@style/ButtonStyle.SecondaryGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_1x"
+                    android:elevation="@dimen/dp_0.25x"
+                    app:cornerRadius="@dimen/dp_1.5x" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_delete"
+                    style="@style/ButtonStyle.Red"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_1x"
+                    android:elevation="@dimen/dp_0.25x"
+                    android:text="@string/Remove"
+                    android:visibility="gone"
+                    app:cornerRadius="@dimen/dp_1.5x" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/incl_progress"
+        layout="@layout/layout_progress" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

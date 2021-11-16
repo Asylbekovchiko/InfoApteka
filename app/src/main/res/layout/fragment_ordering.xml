@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kg.sunrise.infoapteka.ui.main.basket.ordering.OrderingFragment">
+
+    <include
+        android:id="@+id/incl_progress"
+        tools:visibility="visible"
+        layout="@layout/layout_progress"/>
+
+    <include
+        android:id="@+id/incl_toolbar"
+        layout="@layout/layout_toolbar_center_align" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/toolbar_height"
+        android:paddingBottom="@dimen/dp_3x">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/bottom_nav_height">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dp_2.5x"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <kg.sunrise.infoapteka.ui.views.TextInputView
+                    android:id="@+id/tiv_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3x"
+                    app:hint="@string/enter_name"
+                    app:isRequired="true"
+                    app:label="@string/name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <kg.sunrise.infoapteka.ui.views.TextInputView
+                    android:id="@+id/tiv_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3x"
+                    app:hint="@string/enter_last_name"
+                    app:label="@string/last_name"
+                    app:isRequired="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tiv_first_name" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_phones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tiv_last_name"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/rv_profile_number" />
+
+                <kg.sunrise.infoapteka.ui.views.TextInputView
+                    android:id="@+id/tiv_add_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3x"
+                    app:editTextRightIcon="@drawable/ic_plus_with_circle"
+                    app:hint="@string/add_phone_number"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv_phones" />
+
+                <kg.sunrise.infoapteka.ui.views.TextInputView
+                    android:id="@+id/tiv_address_in_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4.5x"
+                    app:editTextRightIcon="@drawable/ic_map"
+                    app:hint="@string/point_address"
+                    app:label="@string/address_in_the_map"
+                    app:isRequired="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tiv_add_phone" />
+
+                <kg.sunrise.infoapteka.ui.views.TextInputView
+                    android:id="@+id/tiv_delivery_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:label="@string/delivery_address"
+                    app:isRequired="true"
+                    android:layout_marginTop="@dimen/dp_3x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tiv_address_in_map" />
+
+                <include
+                    android:id="@+id/inlc_ordering_comment"
+                    layout="@layout/view_enter_big_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3x"
+                    android:background="@drawable/shape_rad_8dp_border_1dp_secondary_gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tiv_delivery_address" />
+
+                <TextView
+                    android:id="@+id/tv_payment_method"
+                    style="@style/TextStyle.Content.SecondaryGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_2.75x"
+                    android:text="@string/payment_method"
+                    android:textSize="@dimen/scale_1.625x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inlc_ordering_comment" />
+
+                <RadioGroup
+                    android:id="@+id/rbg_payment_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_payment_method">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/rb_elsom"
+                        style="@style/RadioButtonStyle.PaymentMethod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2.25x"
+                        android:minHeight="0dp"
+                        android:text="@string/elsom" />
+
+                </RadioGroup>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3x"
+                    android:background="@drawable/shape_rad_16dp_border_1dp_blue_light"
+                    android:paddingHorizontal="@dimen/dp_2x"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rbg_payment_method">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="@string/Total"
+                        android:layout_marginTop="@dimen/dp_2.5x"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/scale_1.875x"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_goods_in_basket"
+                        style="@style/TextStyle.TotalOrdering"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2x"
+                        android:text="@string/basket_items"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_total" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_value_goods_in_basket"
+                        style="@style/TextStyle.Content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_goods_in_basket"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintStart_toEndOf="@+id/tv_goods_in_basket"
+                        app:layout_constraintTop_toTopOf="@+id/tv_goods_in_basket"
+                        tools:text="5" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_approximate_price_of_delivery"
+                        style="@style/TextStyle.TotalOrdering"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_1x"
+                        android:text="@string/approximate_price_of_delivery"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_goods_in_basket" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_value_approximate_price_delivery"
+                        style="@style/TextStyle.Content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_approximate_price_of_delivery"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintStart_toEndOf="@+id/tv_approximate_price_of_delivery"
+                        app:layout_constraintTop_toTopOf="@+id/tv_approximate_price_of_delivery"
+                        tools:text="5" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_total_sum"
+                        style="@style/TextStyle.TotalOrdering"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_1x"
+                        android:text="@string/total_sum"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_approximate_price_of_delivery" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_value_total_sum"
+                        style="@style/TextStyle.Content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_total_sum"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintStart_toEndOf="@+id/tv_total_sum"
+                        app:layout_constraintTop_toTopOf="@+id/tv_total_sum"
+                        tools:text="5" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_order"
+                        style="@style/ButtonStyle.SecondaryGray"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2x"
+                        android:text="@string/order"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_total_sum"
+                        app:rippleColor="@color/light" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_delivery_condition"
+                        style="@style/TextStyle.Content.Blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2.5x"
+                        android:layout_marginBottom="@dimen/dp_4.5x"
+                        android:text="@string/Delivery_condition"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_order" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

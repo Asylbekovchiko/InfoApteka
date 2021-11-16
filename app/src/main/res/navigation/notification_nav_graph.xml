@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notification_nav_graph"
+    app:startDestination="@id/notificationFragment">
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="kg.sunrise.infoapteka.ui.shared.notificationFragment.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment_to_myProductsFragment"
+            app:destination="@id/myProductsFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_ordersHistoryFragment"
+            app:destination="@id/ordersHistoryFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_sellerProfileFragment"
+            app:destination="@id/sellerProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myProductsFragment"
+        android:name="kg.sunrise.infoapteka.ui.main.menu.myProducts.MyProductsFragment"
+        android:label="fragment_my_products"
+        tools:layout="@layout/fragment_my_products" />
+    <fragment
+        android:id="@+id/ordersHistoryFragment"
+        android:name="kg.sunrise.infoapteka.ui.main.menu.ordersHistory.OrdersHistoryFragment"
+        android:label="fragment_orders_history"
+        tools:layout="@layout/fragment_orders_history" />
+    <fragment
+        android:id="@+id/sellerProfileFragment"
+        android:name="kg.sunrise.infoapteka.ui.main.menu.profile.sellerProfile.SellerProfileFragment"
+        android:label="fragment_seller_profile"
+        tools:layout="@layout/fragment_seller_profile" />
+</navigation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_load_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        app:icon="@drawable/ic_camera"
+        android:text="@string/load_image"
+        app:iconGravity="textStart"
+        style="@style/ButtonStyle.Green"
+        app:cornerRadius="@dimen/dp_1.5x"
+        android:layout_height="@dimen/dp_5.75x"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_delete_image"
+        android:layout_marginTop="@dimen/dp_1x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_load_image"
+        app:icon="@drawable/ic_bin"
+        app:iconTint="@null"
+        android:layout_width="match_parent"
+        style="@style/ButtonStyle.StrokeLight"
+        android:text="@string/delete_photo"
+        app:iconGravity="textStart"
+        app:cornerRadius="@dimen/dp_1.5x"
+        android:layout_height="@dimen/dp_5.75x"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

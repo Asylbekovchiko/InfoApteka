@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_farm"
+    app:startDestination="@id/fragment_main_farm">
+        <fragment
+            android:id="@+id/fragment_main_farm"
+            android:name="kg.sunrise.infoapteka.ui.main.home.farmAdresses.FarmMainFragment"
+            android:label="FragmentMain"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <fragment
+            android:id="@+id/farmAdress"
+            android:name="kg.sunrise.infoapteka.ui.main.home.farmAdresses.fragments.farmAdresses.mainFarm.FarmAdressFragment"
+            android:label="DetailFarmFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <fragment
+            android:id="@+id/detailFarmFragment"
+            android:name="kg.sunrise.infoapteka.ui.main.home.farmAdresses.fragments.farmAdresses.detailFarm.DetailFarmFragment"
+            android:label="DetailFarmFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="id"
+                android:defaultValue="0"
+                app:argType="integer" />
+        </fragment>
+    <action
+        android:id="@+id/action_global_detailFarmFragment"
+        app:destination="@id/detailFarmFragment" />
+</navigation>

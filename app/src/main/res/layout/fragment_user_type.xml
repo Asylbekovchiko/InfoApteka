@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    tools:context=".ui.auth.usertype.UserTypeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/incl_toolbar"
+            layout="@layout/layout_toolbar_center_align" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_2.5x"
+            android:layout_marginTop="@dimen/dp_6.5x"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/incl_toolbar"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_sign_type_action"
+            style="@style/TextStyle.Content.SecondaryGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_2.5x"
+            android:layout_marginTop="@dimen/dp_3.5x"
+            android:layout_marginBottom="@dimen/dp_3.5x"
+            android:paddingVertical="@dimen/dp_0.5x"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo"
+            tools:text="@string/registration" />
+
+        <TextView
+            android:id="@+id/tv_label_registration_as"
+            style="@style/TextStyle.Header1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_2.5x"
+            android:layout_marginTop="@dimen/dp_1x"
+            android:text="@string/registration_as"
+            app:layout_constraintTop_toBottomOf="@id/tv_sign_type_action" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_client"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_2.5x"
+            android:layout_marginTop="@dimen/dp_2.25x"
+            android:layout_marginEnd="@dimen/dp_0.5x"
+            app:cardCornerRadius="@dimen/dp_1.5x"
+            app:cardElevation="@dimen/dp_0.5x"
+            app:layout_constraintEnd_toStartOf="@id/cv_seller"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_registration_as"
+            app:rippleColor="@color/light"
+            app:strokeColor="@color/light"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="@dimen/dp_2x">
+
+                <ImageView
+                    android:id="@+id/iv_client_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/user_type_icon_height"
+                    android:src="@drawable/ic_client"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tv_label_client"
+                    style="@style/text_extra_bold_gray_636875_175x"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_1x"
+                    android:layout_marginTop="@dimen/dp_1.5x"
+                    android:gravity="center_horizontal"
+                    android:text="@string/client"
+                    app:layout_constraintTop_toBottomOf="@id/iv_client_logo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_seller"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_0.5x"
+            android:layout_marginTop="@dimen/dp_2.25x"
+            android:layout_marginEnd="@dimen/dp_2.5x"
+            app:cardCornerRadius="@dimen/dp_1.5x"
+            app:cardElevation="@dimen/dp_0.5x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cv_client"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_registration_as"
+            app:rippleColor="@color/light"
+            app:strokeColor="@color/light"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="@dimen/dp_2x">
+
+                <ImageView
+                    android:id="@+id/iv_seller_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/user_type_icon_height"
+                    android:src="@drawable/ic_seller"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tv_label_seller"
+                    style="@style/text_extra_bold_gray_636875_175x"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_1x"
+                    android:layout_marginTop="@dimen/dp_1.5x"
+                    android:gravity="center_horizontal"
+                    android:text="@string/seller"
+                    app:layout_constraintTop_toBottomOf="@id/iv_seller_logo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

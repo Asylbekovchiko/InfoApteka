@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_ffffff_toprad_16dp">
+
+    <ImageView
+        android:id="@+id/iv_result_icon"
+        tools:src="@drawable/ic_error_ordering"
+        android:layout_marginTop="@dimen/dp_3x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_result_text"
+        tools:text="@string/failure"
+        android:textSize="@dimen/scale_1.875x"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="@color/gray_0f335d"
+        android:layout_marginTop="@dimen/dp_2x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_result_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ok_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/ButtonStyle.Green"
+        android:layout_marginTop="@dimen/dp_3x"
+        android:layout_marginBottom="@dimen/dp_2.5x"
+        android:layout_marginHorizontal="@dimen/dp_2.5x"
+        app:rippleColor="@color/light"
+        tools:text="@string/Close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

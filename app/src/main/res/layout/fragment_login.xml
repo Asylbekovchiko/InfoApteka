@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.login.LoginFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/incl_toolbar"
+                layout="@layout/layout_toolbar_center_align" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginVertical="@dimen/dp_1x"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_logo"
+                app:layout_constraintBottom_toTopOf="@id/tv_sign_type"
+                app:layout_constraintTop_toBottomOf="@id/incl_toolbar"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_sign_type"
+                style="@style/TextStyle.Header1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginBottom="@dimen/dp_3x"
+                android:text="@string/sign_in"
+                app:layout_constraintBottom_toTopOf="@id/et_phone_number" />
+
+            <kg.sunrise.infoapteka.ui.views.PhoneNumberInputView
+                android:id="@+id/et_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginBottom="@dimen/dp_4x"
+                app:errorText="@string/number_incorrect"
+                app:label="@string/phone_number"
+                app:layout_constraintBottom_toTopOf="@id/btn_sign_in" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sign_in"
+                style="@style/ButtonStyle.SecondaryGray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2.5x"
+                android:layout_marginBottom="@dimen/dp_6x"
+                android:text="@string/Enter"
+                app:cornerRadius="@dimen/dp_1.5x"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/incl_progress"
+        layout="@layout/layout_progress" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

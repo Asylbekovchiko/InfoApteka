@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/preface_nav.xml"
+    app:startDestination="@id/prefaceFragment">
+
+    <fragment
+        android:id="@+id/prefaceFragment"
+        android:name="kg.sunrise.infoapteka.ui.splashScreen.preface.PrefaceFragment"
+        android:label="fragment_preface"
+        tools:layout="@layout/fragment_preface" >
+        <action
+            android:id="@+id/action_prefaceFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="kg.sunrise.infoapteka.ui.splashScreen.onboarding.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" />
+</navigation>

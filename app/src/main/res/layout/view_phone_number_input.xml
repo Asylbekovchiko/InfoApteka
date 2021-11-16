@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_label_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semi_bold"
+            android:textSize="13sp"
+            android:textColor="@color/secondary_gray_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/tv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:fontFamily="@font/inter_semi_bold"
+            android:textSize="13sp"
+            android:textColor="@color/secondary_gray_3"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@id/tv_label"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/et_input"
+        android:layout_width="0dp"
+        android:background="@color/white"
+        android:layout_height="38dp"
+        android:layout_marginTop="@dimen/dp_0.5x"
+        android:paddingStart="100dp"
+        android:paddingEnd="@dimen/dp_2x"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:textColorHint="@color/secondary_gray"
+        style="@style/TextStyle.Content.Black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_label_container" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/country_code_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:paddingStart="-10dp"
+        app:ccpDialog_keyboardAutoPopup="false"
+        app:ccpDialog_textColor="@android:color/black"
+        app:ccp_contentColor="@color/black"
+        app:ccp_defaultLanguage="RUSSIAN"
+        app:ccp_countryPreference="KG,RU"
+        app:ccp_defaultNameCode="KG"
+        app:ccp_showFlag="true"
+        app:ccp_showNameCode="false"
+        app:ccp_textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/et_input"
+        app:layout_constraintLeft_toLeftOf="@id/et_input"
+        app:layout_constraintTop_toTopOf="@id/et_input"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/iv_left_icon"
+        style="@style/ImageViewStyle"
+        android:layout_width="@dimen/dp_3x"
+        android:layout_height="@dimen/dp_3x"
+        tools:src="@drawable/ic_logo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/et_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_input"/>
+
+    <ImageView
+        android:id="@+id/iv_right_icon"
+        style="@style/ImageViewStyle"
+        android:layout_width="@dimen/dp_3x"
+        android:layout_height="@dimen/dp_3x"
+        tools:src="@drawable/ic_logo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/et_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_input"/>
+
+    <View
+        android:layout_width="0dp"
+        android:id="@+id/divider"
+        android:background="@color/light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_input"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:id="@+id/tv_error"
+        style="@style/TextStyle.Help"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_0.5x"
+        android:textColor="@color/secondary_red"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        tools:text="@tools:sample/full_names"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

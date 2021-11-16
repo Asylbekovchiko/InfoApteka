@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/cl_main"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_adress_logo"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="@dimen/dp_2x"
+        android:layout_marginTop="@dimen/dp_1.5x"
+        android:layout_marginBottom="@dimen/dp_1.5x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_open"
+        style="@style/TextStyle.Content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_1.5x"
+        android:layout_marginTop="@dimen/dp_1.5x"
+        android:textColor="@color/red_dark"
+        app:layout_constraintStart_toEndOf="@+id/iv_adress_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Закрыто" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_distance"
+        style="@style/TextStyle.ContentLittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1.5x"
+        android:layout_marginEnd="@dimen/dp_2x"
+        android:textColor="@color/secondary_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1.2км" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_name_farm"
+        style="@style/TextStyle.Content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_1.5x"
+        android:layout_marginTop="@dimen/dp_1x"
+        android:maxLines="2"
+        android:fontFamily="@font/inter_semi_bold"
+        android:textColor="@color/black_secondary2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_adress_logo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_open"
+        tools:text="@android:string/paste_as_plain_text" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_adress_farm"
+        style="@style/TextStyle.Content"
+        android:layout_width="0dp"
+        android:maxLines="2"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_1.5x"
+        android:layout_marginTop="@dimen/dp_1.5x"
+        android:textColor="@color/black_secondary2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_adress_logo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_farm"
+        tools:text="@android:string/paste_as_plain_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

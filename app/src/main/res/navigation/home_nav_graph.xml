@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <action
+        android:id="@+id/action_global_to_notification_nav_graph"
+        app:destination="@id/notification_nav_graph"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <include app:graph="@navigation/notification_nav_graph" />
+
+    <action
+        android:id="@+id/action_global_searchHingFragment"
+        app:destination="@id/searchHintFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_orderingFragment"
+        app:destination="@id/orderingFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_productDetailFragment"
+        app:destination="@id/productDetailFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <include
+        android:id="@+id/navigation"
+        app:graph="@navigation/farm_nav_graph" />
+
+    <action
+        android:id="@+id/action_global_sellerProducts"
+        app:destination="@id/sellerProductsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/productDetailFragment"
+        app:popUpToInclusive="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="kg.sunrise.infoapteka.ui.main.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_aboutCompanyFragment"
+            app:destination="@id/aboutCompanyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_deliveryConditionFragment2"
+            app:destination="@id/deliveryConditionFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_nav_farm"
+            app:destination="@id/navigation_farm"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_bottom"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="kg.sunrise.infoapteka.ui.shared.searchFragment.searchResult.SearchResultFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search_result">
+        <argument
+            android:name="categoryID"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="search"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderingFragment"
+        android:name="kg.sunrise.infoapteka.ui.main.basket.ordering.OrderingFragment"
+        android:label="fragment_ordering"
+        tools:layout="@layout/fragment_ordering" />
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="kg.sunrise.infoapteka.ui.shared.productDetailFragment.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail">
+        <argument
+            android:name="productId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_zoomFragment"
+            app:destination="@id/zoomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/zoomFragment"
+        android:name="kg.sunrise.infoapteka.ui.shared.zoomFragment.ZoomFragment"
+        android:label="fragment_zoom"
+        tools:layout="@layout/fragment_zoom">
+        <argument
+            android:name="imageURL"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutCompanyFragment"
+        android:name="kg.sunrise.infoapteka.ui.main.home.aboutCompany.AboutCompanyFragment"
+        android:label="fragment_about_company"
+        tools:layout="@layout/fragment_about_company" />
+    <fragment
+        android:id="@+id/searchHintFragment"
+        android:name="kg.sunrise.infoapteka.ui.shared.searchFragment.SearchHintFragment"
+        android:label="fragment_search_hint"
+        tools:layout="@layout/fragment_search_hint">
+        <action
+            android:id="@+id/action_searchHintFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_top"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_bottom"
+            app:popUpTo="@id/home_nav_graph"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/deliveryConditionFragment2"
+        android:name="kg.sunrise.infoapteka.ui.main.basket.deliveryCondition.DeliveryConditionFragment"
+        android:label="DeliveryConditionFragment" />
+    <fragment
+        android:id="@+id/sellerProductsFragment"
+        android:name="kg.sunrise.infoapteka.ui.main.basket.seller.SellerProductsFragment"
+        android:label="SellerProductsFragment"
+        tools:layout="@layout/fragment_seller_basket">
+        <argument
+            android:name="ownerId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+</navigation>

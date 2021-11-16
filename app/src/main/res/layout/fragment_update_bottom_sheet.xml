@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp_2.5x"
+        android:paddingBottom="@dimen/dp_2.5x">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextStyle.Content2.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3x"
+            android:text="@string/Update"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_version_text"
+            style="@style/TextStyle.Content.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1.5x"
+            android:paddingHorizontal="@dimen/dp_8x"
+            android:gravity="center"
+            android:text="@string/App_update"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3x"
+            android:text="@string/Update_btn"
+            app:layout_constraintCircleRadius="@dimen/dp_1.5x"
+            style="@style/ButtonStyle.Green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_version_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_update_later"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1x"
+            android:text="@string/Reminder_btn"
+            app:layout_constraintCircleRadius="@dimen/dp_1.5x"
+            style="@style/ButtonStyle.StrokeLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_update" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

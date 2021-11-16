@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextStyle.Header" parent="Theme.InfoApteka">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextStyle.Header1" parent="TextStyle.Header">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/scale_3x</item>
+    </style>
+
+    <style name="TextStyle.Header2" parent="TextStyle.Header">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/scale_2.5x</item>
+    </style>
+
+    <style name="TextStyle.Header3" parent="TextStyle.Header">
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:textSize">@dimen/scale_2.25x</item>
+    </style>
+
+    <style name="TextStyle.Header4" parent="TextStyle.Header">
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:textSize">@dimen/scale_2x</item>
+    </style>
+
+    <style name="TextStyle.Header5" parent="TextStyle.Header">
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:textSize">@dimen/scale_1.75x</item>
+        <item name="android:textColor">@color/secondary_gray_3</item>
+    </style>
+
+    <style name="TextStyle.Header7" parent="TextStyle.Header">
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/scale_1.5x</item>
+        <item name="android:textColor">@color/secondary_gray_3</item>
+    </style>
+
+    <style name="TextStyle.Header8" parent="TextStyle.Header">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/scale_2x</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle.Header9" parent="TextStyle.Header">
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:textSize">@dimen/scale_1.75x</item>
+    </style>
+
+    <style name="TextStyle.Header6" parent="TextStyle.Header">
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/scale_2.5x</item>
+    </style>
+
+    <style name="TextStyle.HeaderBig" parent="Theme.InfoApteka">
+        <item name="android:textSize">@dimen/scale_3x</item>
+        <item name="fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="TextStyle.Content" parent="Theme.InfoApteka">
+        <item name="android:textSize">@dimen/scale_1.75x</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="TextStyle.ContentLittle" parent="Theme.InfoApteka">
+        <item name="android:textSize">@dimen/scale_1.80x</item>
+        <item name="fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="TextStyle.Number" parent="Theme.InfoApteka">
+        <item name="android:textSize">@dimen/scale_1.75x</item>
+        <item name="fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="TextStyle.SubTitle" parent="Theme.InfoApteka">
+        <item name="android:textSize">@dimen/scale_2x</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="TextStyle.Content2.Black" parent="Theme.InfoApteka">
+        <item name="android:textSize">@dimen/scale_2x</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="TextStyle.Content.Gray2">
+        <item name="android:textColor">@color/gray_2</item>
+    </style>
+
+    <style name="TextStyle.Content.Gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="TextStyle.Content.Orange">
+        <item name="android:textColor">@color/orange</item>
+    </style>
+
+    <style name="TextStyle.Content.SecondaryGray">
+        <item name="android:textColor">@color/secondary_gray</item>
+    </style>
+
+    <style name="TextStyle.Content2.SecondaryGray" parent="TextStyle.Content.SecondaryGray">
+        <item name="android:textSize">@dimen/scale_2x</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+    </style>
+
+    <style name="TextStyle.Content.SecondaryGray2">
+        <item name="android:textColor">@color/secondary_gray_2</item>
+    </style>
+
+    <style name="TextStyle.Content.SecondaryGray3">
+        <item name="android:textColor">@color/secondary_gray_3</item>
+    </style>
+
+    <style name="TextStyle.SubTitle.SecondaryGray">
+        <item name="android:textColor">@color/secondary_gray</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextStyle.Content.Light2">
+        <item name="android:textColor">@color/light_2</item>
+    </style>
+
+    <style name="TextStyle.Content.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle.Content.SecondaryWhite">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyle.Content.Blue">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="TextStyle.Content.DarkBlue">
+        <item name="android:textColor">@color/dark_blue</item>
+    </style>
+
+    <style name="TextStyle.Content.Green">
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="TextStyle.Help" parent="Theme.InfoApteka">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/scale_1.5x</item>
+    </style>
+
+    <style name="TabLayout.TextAppearance" parent="">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/scale_1.75x</item>
+    </style>
+
+    <style name="text_extra_bold_gray_636875_175x">
+        <item name="android:textSize">@dimen/scale_1.75x</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="fontFamily">@font/inter_extra_bold</item>
+    </style>
+
+    <style name="TextStyle.CertificateContent" parent="Theme.InfoApteka">
+        <item name="fontFamily">@font/inter_semi_bold</item>
+        <item name="android:textSize">@dimen/scale_1.5x</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle.CertificateContent2" parent="Theme.InfoApteka">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/scale_1.5x</item>
+        <item name="android:textColor">@color/secondary_gray</item>
+    </style>
+
+    <style name="TextStyle.Profile" parent="Theme.InfoApteka">
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:textSize">@dimen/scale_1.75x</item>
+
+    </style>
+
+    <style name="TextStyle.TotalOrdering" parent="">
+        <item name="android:textColor">@color/secondary_gray</item>
+        <item name="android:textSize">@dimen/scale_1.75x</item>
+        <item name="fontFamily">@font/inter_regular</item>
+    </style>
+
+
+</resources>

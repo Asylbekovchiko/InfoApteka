@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1033707680465",
+    "project_id": "infoapteka-aa436",
+    "storage_bucket": "infoapteka-aa436.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033707680465:android:251fd1fd234df1242ecbf0",
+        "android_client_info": {
+          "package_name": "kg.sunrise.infoapteka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033707680465-m0rf0emac7f3tu9t1tm8q79ul8om0bph.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kg.sunrise.infoapteka",
+            "certificate_hash": "8ebe80b6ee5bb7c0cf69f5741a5c260c7b98efc9"
+          }
+        },
+        {
+          "client_id": "1033707680465-oqkuojahkbsje8jjr82l4dr93t5dr4h9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiZluWpHzndPBoYc76za0QySanMJZj77g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033707680465-oqkuojahkbsje8jjr82l4dr93t5dr4h9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

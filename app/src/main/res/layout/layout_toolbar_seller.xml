@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Corner_bottom_16"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:paddingVertical="@dimen/dp_1.5x"
+        android:paddingHorizontal="@dimen/dp_2.5x">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/ImageViewStyle"
+            android:layout_width="@dimen/icon_arrow_size"
+            android:layout_height="@dimen/icon_arrow_size"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_toolbar"
+            style="@style/TextStyle.Header3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_5x"
+            android:gravity="center"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/iv_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_back"
+            tools:text="@string/seller" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_seller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/toolbar_height"
+        android:paddingHorizontal="@dimen/dp_2.5x"
+        android:paddingVertical="@dimen/dp_2.5x">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/seller_logo"
+            style="@style/ShapeAppearanceOverlay.Size_92"
+            android:scaleType="centerCrop"
+            android:padding="@dimen/dp_0.01x"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+        <TextView
+            android:id="@+id/tv_seller_name"
+            style="@style/TextStyle.Header9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_1.75x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/seller_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/seller" />
+
+        <TextView
+            android:id="@+id/tv_number_title"
+            style="@style/TextStyle.Header7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_1.75x"
+            android:layout_marginTop="@dimen/dp_1x"
+            android:text="@string/number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/seller_logo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_seller_name" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            style="@style/TextStyle.Content.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_1.75x"
+            android:layout_marginTop="@dimen/dp_0.5x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/seller_logo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_number_title"
+            tools:text="@string/number_incorrect" />
+
+        <TextView
+            android:id="@+id/tv_address_title"
+            style="@style/TextStyle.Header7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_1.75x"
+            android:layout_marginTop="@dimen/dp_1x"
+            android:text="@string/profile_adress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/seller_logo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_number" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            style="@style/TextStyle.Content.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_1.75x"
+            android:layout_marginTop="@dimen/dp_0.5x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/seller_logo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address_title"
+            tools:text="@string/seller" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

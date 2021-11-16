@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_ffffff_radius_12dp"
+    android:layout_height="48dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sort"
+        style="@style/ButtonStyle.StrokeLight.Sort"
+        android:layout_width="156dp"
+        android:layout_height="32dp"
+        app:rippleColor="@color/light"
+        app:iconSize="20dp"
+        android:text="@string/Sort"
+        app:iconGravity="end"
+        app:icon="@drawable/ic_arrow_half_down"
+        app:iconTint="@null"
+        android:layout_marginStart="@dimen/dp_1x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/TextStyle.Content.SecondaryGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_0.5x"
+        android:text="@string/View"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/card_block_style"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_block_style"
+        app:rippleColor="@color/light"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:cardCornerRadius="@dimen/dp_0.5x"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/card_grid_style"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv_block_style"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_card_block_unchecked" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_grid_style"
+        android:layout_width="28dp"
+        app:rippleColor="@color/light"
+        android:layout_height="28dp"
+        android:layout_marginEnd="@dimen/dp_1.5x"
+        app:cardCornerRadius="@dimen/dp_0.5x"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_grid_style"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_card_grid_unchecked" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

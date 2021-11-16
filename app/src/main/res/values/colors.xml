@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="black">#181818</color>
+    <color name="black_secondary">#171717</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light">#D4E3FF</color>
+    <color name="light_F8FBFF">#F8FBFF</color>
+    <color name="light_30">#4DD4E3FF</color>
+    <color name="light_2">#EAF1FF</color>
+    <color name="blue">#0098D7</color>
+
+    <color name="dark_blue">#0B4D73</color>
+    <color name="gray_2">#98949E</color>
+    <color name="gray_0f335d">#0F335D</color>
+    <color name="gray_3">#636875</color>
+    <color name="gray_dots">#F1F1F1</color>
+    <color name="gray">#636875</color>
+    <color name="gray_light">#667689</color>
+    <color name="purple_dark">#032D80</color>
+    <color name="secondary_gray">#8B96B1</color>
+    <color name="secondary_gray_2">#8B96B1</color>
+    <color name="secondary_gray_3">#6E7AA5</color>
+    <color name="secondary_red">#F84364</color>
+    <color name="green_secondary">#1D9F22</color>
+    <color name="red_FAE0E6">#FAE0E6</color>
+    <color name="light_F6F9FF">#F6F9FF</color>
+    <color name="secondary_gray_light">#CDDAF1</color>
+    <color name="secondary_blue">#E9F0FC</color>
+    <color name="green">#5BAC46</color>
+    <color name="orange">#FD9B08</color>
+    <color name="black_secondary2">#3B3D46</color>
+    <color name="blue_light">#EAF1FF</color>
+    <color name="red_dark">#E31B4B</color>
+
+    <color name="background_gray">#F5F5F5</color>
+    <color name="green_5BAC46">#5BAC46</color>
+    <color name="light_blue_D4E3FF">#D4E3FF</color>
+
+    <color name="card_blur">#99FFFFFF</color>
+
+</resources>

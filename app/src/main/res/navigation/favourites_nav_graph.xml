@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/favourites_nav_graph"
+    app:startDestination="@id/favouriteFragment">
+
+    <action
+        android:id="@+id/action_global_productDetailFragment"
+        app:destination="@id/productDetailFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_sellerProducts"
+        app:destination="@id/sellerProductsFragment2"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/productDetailFragment"
+        app:popUpToInclusive="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="kg.sunrise.infoapteka.ui.main.favourite.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="kg.sunrise.infoapteka.ui.shared.productDetailFragment.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail" >
+        <argument
+            android:name="productId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_zoomFragment"
+            app:destination="@id/zoomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/zoomFragment"
+        android:name="kg.sunrise.infoapteka.ui.shared.zoomFragment.ZoomFragment"
+        android:label="fragment_zoom"
+        tools:layout="@layout/fragment_zoom" >
+        <argument
+            android:name="imageURL"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellerProductsFragment2"
+        android:name="kg.sunrise.infoapteka.ui.main.basket.seller.SellerProductsFragment"
+        android:label="SellerProductsFragment" >
+        <argument
+            android:name="ownerId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+</navigation>

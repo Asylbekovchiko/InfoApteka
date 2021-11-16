@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kg.sunrise.infoapteka.ui.main.menu.profile.customerProfile.CustomerProfileFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:paddingBottom="@dimen/bottom_nav_height">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/incl_toolbar"
+            layout="@layout/layout_toolbar_center_align"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/incl_toolbar"
+            android:paddingHorizontal="@dimen/dp_2.5x"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/incl_avatar"
+                layout="@layout/avatar_shapeable_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_2.875x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <kg.sunrise.infoapteka.ui.views.PhoneNumberInputView
+                android:id="@+id/tiv_phone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/incl_avatar"
+                android:layout_marginTop="@dimen/dp_4.25x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <kg.sunrise.infoapteka.ui.views.TextInputView
+                android:id="@+id/tiv_first_name"
+                app:label="@string/name"
+                app:isRequired="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tiv_phone"
+                android:layout_marginTop="@dimen/dp_3x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <kg.sunrise.infoapteka.ui.views.TextInputView
+                android:id="@+id/tiv_last_name"
+                app:label="@string/last_name"
+                app:isRequired="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tiv_first_name"
+                android:layout_marginTop="@dimen/dp_3x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <kg.sunrise.infoapteka.ui.views.TextInputView
+                android:id="@+id/tiv_patronymic"
+                app:label="@string/patronymic"
+                app:isRequired="false"
+                app:hint="@string/input_your_patronymic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tiv_last_name"
+                android:layout_marginTop="@dimen/dp_3x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <kg.sunrise.infoapteka.ui.views.TextInputView
+                android:id="@+id/tiv_choose_city"
+                app:label="@string/choose_city"
+                app:isRequired="true"
+                app:hint="@string/choose_your_city"
+                app:editTextRightIcon="@drawable/ic_arrow_half_down"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tiv_patronymic"
+                android:layout_marginTop="@dimen/dp_3x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <kg.sunrise.infoapteka.ui.views.TextInputView
+                android:id="@+id/tiv_birth_date"
+                app:label="@string/birth_date"
+                app:isRequired="true"
+                app:hint="@string/choose_your_city"
+                app:editTextLeftIcon="@drawable/ic_birth_date"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/dp_3x"
+                app:layout_constraintTop_toBottomOf="@+id/tiv_choose_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <include
+                android:id="@+id/incl_btn_save"
+                layout="@layout/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4x"
+                android:layout_marginBottom="@dimen/dp_3x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tiv_birth_date"
+                app:layout_constraintVertical_bias="0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include
+        android:id="@+id/incl_progress"
+        layout="@layout/layout_progress"
+        android:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

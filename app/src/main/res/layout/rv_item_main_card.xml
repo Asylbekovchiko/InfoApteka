@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="@dimen/dp_0.5x"
+    app:cardCornerRadius="@dimen/dp_1.5x"
+    app:cardElevation="0dp"
+    app:rippleColor="@color/light_30"
+    app:strokeColor="@color/light_2"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:minHeight="132dp"
+        android:minWidth="120dp"
+        android:padding="@dimen/dp_1.25x">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/green"
+            tools:src="@drawable/ic_pin" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextStyle.Content.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1.25x"
+            android:ellipsize="end"
+            android:fontFamily="@font/inter_semi_bold"
+            android:maxLines="3"
+            android:text="@string/Lorem"
+            android:textSize="@dimen/scale_1.75x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_icon" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/TextStyle.Content.SecondaryGray3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_0.5x"
+            android:text="@string/app_name"
+            android:textSize="@dimen/scale_1.75x"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

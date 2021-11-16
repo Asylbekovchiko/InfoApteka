@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_root"
+    android:layout_width="match_parent"
+    android:visibility="gone"
+    android:layout_height="@dimen/bottom_nav_with_sheet"
+    app:cardCornerRadius="@dimen/dp_2.5x"
+    app:strokeColor="@color/blue_light"
+    app:strokeWidth="@dimen/dp_0.25x"
+    app:rippleColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_final_basket"
+            style="@style/TextStyle.Header6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_2x"
+            android:layout_marginTop="@dimen/dp_2.5x"
+            android:text="@string/basket_final"
+            android:textColor="@color/black_secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDeliveryCondition"
+            style="@style/TextStyle.Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3x"
+            android:layout_marginEnd="@dimen/dp_2x"
+            android:text="@string/Delivery_condition"
+            android:textColor="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_busket_total"
+            style="@style/TextStyle.Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_2x"
+            android:layout_marginTop="@dimen/dp_3x"
+            android:text="@string/basket_items"
+            android:textColor="@color/secondary_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_final_basket" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_item_basket_count"
+            style="@style/TextStyle.Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_btn_size"
+            android:layout_marginEnd="@dimen/dp_2x"
+            android:textColor="@color/black_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDeliveryCondition" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView"
+            style="@style/TextStyle.Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_2x"
+            android:layout_marginTop="@dimen/dp_1x"
+            android:text="@string/basket_total_sum"
+            android:textColor="@color/secondary_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_busket_total" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_total_amount"
+            style="@style/TextStyle.Content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1x"
+            android:layout_marginEnd="@dimen/dp_2x"
+            android:layout_marginBottom="@dimen/dp_3x"
+            android:textColor="@color/black_secondary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_basket_count" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

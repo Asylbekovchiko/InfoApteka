@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- dp -->
+    <dimen name="dp_0.01x">1dp</dimen>
+    <dimen name="dp_0.25x">2dp</dimen>
+    <dimen name="dp_0.5x">4dp</dimen>
+    <dimen name="dp_0.75x">6dp</dimen>
+    <dimen name="dp_1x">8dp</dimen>
+    <dimen name="dp_1.25x">10dp</dimen>
+    <dimen name="dp_1.5x">12dp</dimen>
+    <dimen name="dp_1.75x">14dp</dimen>
+    <dimen name="dp_2x">16dp</dimen>
+    <dimen name="dp_2.25x">18dp</dimen>
+    <dimen name="dp_2.5x">20dp</dimen>
+    <dimen name="dp_2.75x">22dp</dimen>
+    <dimen name="dp_2.875x">23dp</dimen>
+    <dimen name="dp_3x">24dp</dimen>
+    <dimen name="dp_3.25x">26dp</dimen>
+    <dimen name="dp_3.5x">28dp</dimen>
+    <dimen name="dp_4x">32dp</dimen>
+    <dimen name="dp_4.25x">34dp</dimen>
+    <dimen name="dp_4.5x">36dp</dimen>
+    <dimen name="dp_4.75x">38dp</dimen>
+    <dimen name="dp_5x">40dp</dimen>
+    <dimen name="dp_5.5x">44dp</dimen>
+    <dimen name="dp_5.75x">46dp</dimen>
+    <dimen name="dp_6x">48dp</dimen>
+    <dimen name="dp_7x">56dp</dimen>
+    <dimen name="dp_8x">64dp</dimen>
+    <dimen name="dp_10.25x">82dp</dimen>
+    <dimen name="dp_10x">100dp</dimen>
+    <dimen name="dp_6.5x">52dp</dimen>
+
+
+    <!-- sp -->
+    <dimen name="scale">8sp</dimen>
+    <dimen name="scale_1.80x">11sp</dimen>
+    <dimen name="scale_1.5x">12sp</dimen>
+    <dimen name="scale_1.625x">13sp</dimen>
+    <dimen name="scale_1.75x">14sp</dimen>
+    <dimen name="scale_1.875x">15sp</dimen>
+    <dimen name="scale_2x">16sp</dimen>
+    <dimen name="scale_2.25x">18sp</dimen>
+    <dimen name="scale_2.5x">20sp</dimen>
+    <dimen name="scale_3x">24sp</dimen>
+
+    <!-- translation z -->
+    <dimen name="z_back_arrow">1dp</dimen>
+    <dimen name="z_progressbar">10dp</dimen>
+    <dimen name="z_no_internet">11dp</dimen>
+
+    <dimen name="bottom_nav_height">60dp</dimen>
+    <dimen name="toolbar_height">48dp</dimen>
+    <dimen name="menu_item_height">44dp</dimen>
+    <dimen name="toolbar_seller_height">145dp</dimen>
+    <dimen name="icon_bottom_nav_size">24dp</dimen>
+    <dimen name="bottom_nav_with_sheet">142dp</dimen>
+
+    <!-- icon size -->
+    <dimen name="basket_icon_size">35dp</dimen>
+    <dimen name="icon_arrow_size">24dp</dimen>
+    <dimen name="logo_seller_size">92dp</dimen>
+    <dimen name="toolbar_main_height">64dp</dimen>
+    <dimen name="notification_size">24dp</dimen>
+    <dimen name="notification_item_size">20dp</dimen>
+    <dimen name="card_btn_size">28dp</dimen>
+    <dimen name="card_block_size">32dp</dimen>
+    <dimen name="card_block_large_width">64dp</dimen>
+    <dimen name="card_item_image_size">124dp</dimen>
+    <dimen name="user_type_icon_height">143dp</dimen>
+    <dimen name="map_size_farm">236dp</dimen>
+    <dimen name="basket_item_size">6.5dp</dimen>
+
+    <!-- item size -->
+    <dimen name="item_certificate_size">144dp</dimen>
+
+</resources>

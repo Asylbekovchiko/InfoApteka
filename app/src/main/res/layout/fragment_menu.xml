@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.menu.MenuFragment">
+
+    <include android:id="@+id/incl_toolbar"
+        layout="@layout/layout_toolbar_center_align" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_menu_items"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_1x"
+        android:layout_marginVertical="@dimen/dp_1.5x"
+        android:overScrollMode="never"
+        android:paddingBottom="@dimen/dp_1x"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/incl_toolbar"
+        tools:itemCount="5"
+        tools:listitem="@layout/rv_item_menu" />
+
+    <include
+        android:id="@+id/incl_progress"
+        layout="@layout/layout_progress"
+        tools:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

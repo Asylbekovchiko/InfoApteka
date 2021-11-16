@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/bottom_nav_height">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/incl_progress"
+                layout="@layout/layout_progress" />
+
+            <include
+                android:id="@+id/incl_toolbar"
+                layout="@layout/layout_toolbar_center_align" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_title"
+                style="@style/TextStyle.HeaderBig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2x"
+                android:layout_marginTop="@dimen/dp_2x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/incl_toolbar" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvOpen"
+                style="@style/TextStyle.Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_2x"
+                android:layout_marginTop="@dimen/dp_2.5x"
+                android:textColor="@color/orange"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_distance"
+                style="@style/TextStyle.Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_2.5x"
+                android:layout_marginEnd="@dimen/dp_2x"
+                android:textColor="@color/secondary_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/rv_images"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2x"
+                android:layout_marginTop="@dimen/dp_1.5x"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_distance" />
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/dotsIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_1.5x"
+                app:dotsColor="@color/gray_dots"
+                app:dotsCornerRadius="@dimen/dp_0.5x"
+                app:dotsSize="@dimen/dp_0.75x"
+                app:dotsSpacing="@dimen/dp_1x"
+                app:dotsWidthFactor="1"
+                app:layout_constraintEnd_toEndOf="@+id/rv_images"
+                app:layout_constraintStart_toStartOf="@+id/rv_images"
+                app:layout_constraintTop_toBottomOf="@+id/rv_images"
+                app:selectedDotColor="@color/orange" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView2"
+                style="@style/TextStyle.Content.SecondaryGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_2x"
+                android:layout_marginTop="@dimen/dp_2.5x"
+                android:text="@string/adress_farm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dotsIndicator" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_adress"
+                style="@style/TextStyle.Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_2x"
+                android:layout_marginTop="@dimen/dp_0.5x"
+                android:textColor="@color/black_secondary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView3"
+                style="@style/TextStyle.Content.SecondaryGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_2x"
+                android:layout_marginTop="@dimen/dp_2x"
+                android:text="@string/time_table"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_adress" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvShecdle"
+                style="@style/TextStyle.Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_2x"
+                android:layout_marginTop="@dimen/dp_0.5x"
+                android:textColor="@color/black_secondary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView3" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_phone_title"
+                android:visibility="gone"
+                style="@style/TextStyle.Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_2x"
+                android:layout_marginTop="@dimen/dp_2x"
+                android:text="@string/phone_number"
+                android:textColor="@color/secondary_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvShecdle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_phoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_2x"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="@dimen/dp_0.5x"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone_title"
+                tools:itemCount="3"
+                tools:listitem="@layout/rv_phone_farm_item" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/map_size_farm"
+                android:layout_marginHorizontal="@dimen/dp_2x"
+                android:layout_marginTop="@dimen/dp_3.25x"
+                android:layout_marginBottom="@dimen/dp_3x"
+                app:cardCornerRadius="@dimen/dp_1.5x"
+                app:cardElevation="0dp"
+                android:id="@+id/cv_container_map"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_phoneNumber"
+                app:layout_constraintVertical_bias="0.0">
+                <fragment
+                    android:id="@+id/fragment_map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

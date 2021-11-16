@@ -1,0 +1,5 @@
+<resources>
+
+    // Ключ взят с акк pagerTeam
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBcA7WFDydKiMgV0Ppikxr__tGdZoWTNxk</string>
+</resources>
